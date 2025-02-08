@@ -12,13 +12,16 @@ rl.on("SIGINT", () => {
 });
 
 async function handleUserInput(input, agentId) {
+  console.log("input", input);
+  console.log("agentId", agentId);
   if (input.toLowerCase() === "exit") {
     rl.close();
     process.exit(0);
   }
 
   try {
-    const serverPort = parseInt(settings.SERVER_PORT || "3000");
+    const serverPort = parseInt(settings.SERVER_PORT || "3001");
+    console.log("serverPort", `http://localhost:${serverPort}/${agentId}/message`);
 
     const response = await fetch(
       `http://localhost:${serverPort}/${agentId}/message`,

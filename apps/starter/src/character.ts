@@ -2,10 +2,10 @@ import { Character, Clients, defaultCharacter, ModelProviderName } from "@elizao
 
 export const character: Character = {
     ...defaultCharacter,
-    // name: "Eliza",
+    name: "Blockvesity",
     // plugins: [],
     // clients: [],
-    // modelProvider: ModelProviderName.OPENAI,
+    modelProvider: ModelProviderName.VOLENGINE,
     // settings: {
     //     secrets: {},
     //     voice: {
